@@ -1,0 +1,40 @@
+name: General
+main: org.jack.plugins.Main
+version: 1.2a
+author: Warauthor
+description: A general plugin for my personal bukkit server.
+commands:
+  kill:
+    description: This is the kill command.
+    usage: /kill    
+  sc:
+    description: This is the spawn creeper command.
+    usage: /sc
+  teleport:
+    description: Teleports the player to a random location.
+    usage: /teleport
+  currentlocation:
+    description: Gives the player his current location.
+    usage: /currentlocation
+  currenttime:
+    description: Gives the player the current real world time.
+    usage: /currenttime 
+  cowspawn:
+    description: Spawns a cow at player block.
+    usage: /cowspawn
+  iteminfo:
+    description: Shows the player's current held item and amount in stack.
+    usage: /iteminfo
+  shower:
+    description: Drops an item stack 10 blocks above the player of the type specified
+    usage: /shower <itemID> <stackSize>
+  killradius:
+    description: Kills all mobs in a given player provided radius surrounding the player.
+    usage: /killradius <radius>
+  blockbelow:
+    description: Returns the type of the block directly below the player. 
+    usage: /blockbelow
+  explosion:
+    description: Creates an explosion 15 blocks in front of the player.
+    usage: /explosion
+permissions:
