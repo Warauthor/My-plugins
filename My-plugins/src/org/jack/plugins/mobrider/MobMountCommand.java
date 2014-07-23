@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 
 public class MobMountCommand implements CommandExecutor{
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label,
 			String[] args) {
@@ -18,7 +19,7 @@ public class MobMountCommand implements CommandExecutor{
 			
 			if(p.isInsideVehicle() == false){
 				
-				for(Entity e : p.getNearbyEntities(1, 1, 1)){
+				for(Entity e : p.getTargetBlock(null, 5).getWorld().getEntities()){
 					
 					e.setPassenger(p);
 					break;
