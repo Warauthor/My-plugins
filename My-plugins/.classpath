@@ -5,5 +5,6 @@
 	<classpathentry kind="lib" path="C:/Users/Jack/Minecraft/bukkit-1.7.9-R0.3-20140603.211345-2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Jack/Minecraft/Vault-1.4.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Jack/Minecraft/craftbukkit-1.7.9-R0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jack/Minecraft/minecraft_server.1.7.10.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

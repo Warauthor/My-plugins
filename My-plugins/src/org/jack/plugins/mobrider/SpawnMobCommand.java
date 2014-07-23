@@ -15,12 +15,11 @@ public class SpawnMobCommand implements CommandExecutor {
 
 		if (sender instanceof Player && cmd.getName().equalsIgnoreCase("sm")) {
 
-			Player player = (Player) sender;
+			Player p = (Player) sender;
 
 			String mobname = args[0].toString();
 
-			player.getWorld().spawnEntity(player.getLocation(),
-					EntityType.fromName(mobname));
+			new Mount(p, p.getLocation(), EntityType.fromName(mobname));
 
 		}
 
