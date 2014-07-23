@@ -5,14 +5,12 @@ import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jack.plugins.commands.BlockBelowCommand;
-import org.jack.plugins.commands.CowSpawn;
 import org.jack.plugins.commands.CurrentTimeCommand;
 import org.jack.plugins.commands.DropItemCommand;
 import org.jack.plugins.commands.ExplosionCommand;
 import org.jack.plugins.commands.KillCommand;
 import org.jack.plugins.commands.KillRadiusCommand;
 import org.jack.plugins.commands.LocationCommand;
-import org.jack.plugins.commands.MobMountCommand;
 import org.jack.plugins.commands.ShowISCommand;
 import org.jack.plugins.commands.ShowerTimeCommand;
 import org.jack.plugins.commands.SpawnCreeper;
@@ -20,8 +18,8 @@ import org.jack.plugins.commands.TeleportCommand;
 import org.jack.plugins.listeners.CDiamondListener;
 import org.jack.plugins.listeners.CowExplosionListener;
 import org.jack.plugins.listeners.CreeperPigsListener;
-import org.jack.plugins.listeners.ExplosionListener;
 import org.jack.plugins.listeners.MobListener;
+import org.jack.plugins.mobrider.SpawnMobCommand;
 
 public class Main extends JavaPlugin {
 
@@ -61,7 +59,7 @@ public class Main extends JavaPlugin {
 				new CreeperPigsListener(), this);
 		getServer().getPluginCommand("showertime").setExecutor(
 				new ShowerTimeCommand());
-		getServer().getPluginCommand("mm").setExecutor(new MobMountCommand());
+		getServer().getPluginCommand("sm").setExecutor(new SpawnMobCommand());
 		m = this;
 		setupEconomy();
 	}

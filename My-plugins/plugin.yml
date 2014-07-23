@@ -40,7 +40,7 @@ commands:
   showertime:
     description: showers the player for a specified amount of time with a specified item 10 blocks above their head.
     usage: /showertime <seconds> <itemID>
-  mm:
-    description: spawns a named mob and sets it as a rideable mount.
-    usage: /mm <mobname>
+  sm:
+    description: spawns a named mob
+    usage: /sm <mobname>
 permissions:
