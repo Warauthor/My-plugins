@@ -61,8 +61,8 @@ public class Main extends JavaPlugin {
 				new CreeperPigsListener(), this);
 		getServer().getPluginCommand("showertime").setExecutor(
 				new ShowerTimeCommand());
-		m = this;
 		getServer().getPluginCommand("mm").setExecutor(new MobMountCommand());
+		m = this;
 		setupEconomy();
 	}
 
