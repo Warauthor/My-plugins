@@ -1,7 +1,6 @@
 package org.jack.plugins.listeners;
 
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
+
 import org.bukkit.entity.Cow;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,7 +17,6 @@ public class CowExplosionListener implements Listener {
 			e.getEntity().getWorld()
 					.createExplosion(e.getEntity().getLocation().add(0, 0, 30.0), (float) 20.0);
 			
-			Bukkit.broadcastMessage(ChatColor.RED + "EXPLOSIONNNNN!");
 		}
 
 	}

@@ -16,9 +16,8 @@ public class ShowISCommand implements CommandExecutor {
 
 			Player player = (Player) sender;
 
-			player.sendMessage("Item: " + player.getItemInHand());
+			player.sendMessage("Item: " + player.getItemInHand().toString());
 		}
 		return false;
 	}
-
 }

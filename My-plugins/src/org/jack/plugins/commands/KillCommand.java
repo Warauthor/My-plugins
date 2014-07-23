@@ -13,12 +13,6 @@ public class KillCommand implements CommandExecutor {
 		if (sender instanceof Player && cmd.getName().equalsIgnoreCase("kill")) {
 			
 			
-			if(sender.hasPermission("HcRaid.Kill.Your.Self")){
-				
-				// do shit...
-				
-			}
-			
 			Player player = (Player) sender;
 			player.setHealth(0);
 			Bukkit.broadcastMessage(ChatColor.DARK_RED + player.getName() + " killed themselves");

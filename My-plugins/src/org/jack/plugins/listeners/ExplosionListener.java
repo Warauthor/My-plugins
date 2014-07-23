@@ -24,7 +24,7 @@ public class ExplosionListener implements Listener {
 				}
 
 			}
-		}.runTaskLater(Main.m, 20);
+		}.runTaskLater(Main.m, 10);
 
 	}
 

@@ -1,6 +1,6 @@
 name: General
 main: org.jack.plugins.Main
-version: 1.2a
+version: 1.4
 author: Warauthor
 description: A general plugin for my personal bukkit server.
 commands:
@@ -37,4 +37,10 @@ commands:
   explosion:
     description: Creates an explosion 15 blocks in front of the player.
     usage: /explosion
+  showertime:
+    description: showers the player for a specified amount of time with a specified item 10 blocks above their head.
+    usage: /showertime <seconds> <itemID>
+  mobmount:
+    description: spawns a named mob and sets it as a rideable mount.
+    usage: /mm <mobname>
 permissions:
