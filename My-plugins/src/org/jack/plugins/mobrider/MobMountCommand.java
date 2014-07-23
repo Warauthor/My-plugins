@@ -18,7 +18,7 @@ public class MobMountCommand implements CommandExecutor{
 			
 			if(p.isInsideVehicle() == false){
 				
-				for(Entity e : p.getNearbyEntities(10, 10, 10)){
+				for(Entity e : p.getNearbyEntities(1, 1, 1)){
 					
 					e.setPassenger(p);
 					break;
