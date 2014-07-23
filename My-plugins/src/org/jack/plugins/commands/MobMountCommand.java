@@ -3,8 +3,8 @@ package org.jack.plugins.commands;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 
 public class MobMountCommand implements CommandExecutor {
@@ -17,13 +17,21 @@ public class MobMountCommand implements CommandExecutor {
 		if (sender instanceof Player && cmd.getName().equalsIgnoreCase("mm")) {
 			Player player = (Player) sender;
 
-			String mobname = args.toString().toUpperCase();
+			String mobname = args[0].toString();
+			
 
-			Entity e = player.getWorld().spawnEntity(player.getLocation(),
+			LivingEntity e = (LivingEntity) player.getWorld().spawnEntity(player.getLocation(),
 					EntityType.fromName(mobname));
 
-			e.setPassenger(player);
+			if (e != null) {
 
+				e.setPassenger(player);
+
+			}
+			else{
+				player.sendMessage("The entity you specified was null");
+				
+			}
 		}
 
 		return false;
