@@ -22,10 +22,13 @@ public class Mount {
 	private Player tracktarget;
 	private Location targetlocation;
 	private BukkitTask ts;
+	private Boolean trackmode;
 
 	public Mount(Player p, Location l, EntityType et) {
 
+		trackmode = false;
 		setName();
+		startTimer();
 
 	}
 
@@ -67,17 +70,37 @@ public class Mount {
 
 	}
 
-	private void startTimer(){
-        ts = new BukkitRunnable(){
+	private void startTimer() {
+		ts = new BukkitRunnable() {
 
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
-				
+
+				if (tracktarget.isOnline()) {
+
+					updateTrackLocation();
+
+				}
+
 			}
-			
-			
+
 		}.runTaskTimer(Main.m, 10, 20);
-		
+
 	}
+
+	private void cancelTimer() {
+		if (mount.isDead()) {
+			p.sendMessage("Your mount has died");
+		}
+		mount.remove();
+		ts.cancel();
+
+	}
+
+	private void track() {
+		
+		if(trackmode = true){
+
+	}
+}
 }
