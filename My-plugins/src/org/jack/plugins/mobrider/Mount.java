@@ -42,22 +42,27 @@ public class Mount {
 		mount.setPassenger(p);
 	}
 
-	public void trackPlayer(Player tt) {
+	public void trackPlayer(Player tracktarget) {
 
-		this.tracktarget = tt;
+		trackmode = true;
 
-		if (tt.isOnline() && tt.isDead() == false) {
+		if (tracktarget != null) {
 
-			EntityCreature ec = ((CraftCreature) mount).getHandle();
+			if (tracktarget.isOnline() && tracktarget.isDead() == false) {
 
-			float speed = 1.4f;
+				EntityCreature ec = ((CraftCreature) mount).getHandle();
 
-			Block to = tt.getLocation().getBlock();
+				float speed = 1.4f;
 
-			PathEntity pf = ((CraftWorld) to.getWorld()).getHandle().a(ec,
-					to.getX(), to.getY(), to.getZ(), speed, true, false, false,
-					true);
-			ec.setPathEntity(pf);
+				Block to = tracktarget.getLocation().getBlock();
+
+				PathEntity pf = ((CraftWorld) to.getWorld()).getHandle().a(ec,
+						to.getX(), to.getY(), to.getZ(), speed, true, false,
+						false, true);
+				ec.setPathEntity(pf);
+			}
+
+			p.sendMessage("The player you are trying to track is null");
 
 		}
 	}
@@ -76,9 +81,11 @@ public class Mount {
 			@Override
 			public void run() {
 
-				if (tracktarget.isOnline()) {
+				if (tracktarget.isOnline() && trackmode == true) {
 
 					updateTrackLocation();
+
+					track();
 
 				}
 
@@ -98,9 +105,17 @@ public class Mount {
 	}
 
 	private void track() {
-		
-		if(trackmode = true){
+
+		if (mount.isDead()) {
+
+			cancelTimer();
+
+		}
+	}
+
+	public void setTrackTarget(Player tt) {
+
+		this.tracktarget = tt;
 
 	}
-}
 }
