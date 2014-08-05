@@ -1,0 +1,6 @@
+name: pvp region lock
+main: org.hcraid.factions.Main
+version: 1.0
+author:  Birdosaurus_Grim
+description: Force field enabling plugin for pvp flagged players
+permissions:
