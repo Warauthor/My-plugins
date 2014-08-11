@@ -18,8 +18,10 @@ public class SpawnMobCommand implements CommandExecutor {
 			Player p = (Player) sender;
 
 			String mobname = args[0].toString();
+			
+			p.getWorld().spawnEntity(p.getLocation(), EntityType.fromName(mobname));
 
-			new Mount(p, p.getLocation(), EntityType.fromName(mobname));
+			//new Mount(p, p.getLocation(), EntityType.fromName(mobname));
 
 		}
 

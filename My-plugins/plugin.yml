@@ -1,6 +1,6 @@
 name: General
 main: org.jack.plugins.Main
-version: 1.4
+version: 1.5
 author: Warauthor
 description: A general plugin for my personal bukkit server.
 commands:
@@ -43,4 +43,10 @@ commands:
   sm:
     description: spawns a named mob
     usage: /sm <mobname>
+  track:
+    description: Make your mount track the location of a given player
+    usage: /track <playername>
+  mm:
+    description: Mounts your spawned entity
+    usage: /mm
 permissions:
